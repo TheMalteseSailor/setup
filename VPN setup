@@ -47,3 +47,22 @@ ssh-copy-id owner@10.8.0.1
 // give ssh password
 ssh owner@10.8.0.1
 // it asks for key password
+
+
+Setting up SSH on aws lightsail:
+//Navigate to lightsail account at the top right
+// Select SSH Keys tab once the page loads
+// download the default keys using the download button next to the region key
+// go to the lightsail homepage and select the button to create a new instance
+// choose OS only and select ubuntu 20.04 LTS
+// **** make sure that auto create snapshots are disable b/c that costs money ****
+// click the button to create the instance at the bottom.
+// Make sure your public IP is attached to the instance
+ssh -i LightsailDefaultKey-us-east-1.pem ubuntu@54.198.152.41
+// in lightsail webui, disable IPv6.
+// in lightsale webui, add a custom firewall rule, UDP, 1194 or the port selected in your ovpn setup script.
+
+//print the /root/client.opvn to terminal and copy the text to local /etc/openvpn/client/client.ovpn
+// follow the above sections to connet ovpn and port forward.
+
+
