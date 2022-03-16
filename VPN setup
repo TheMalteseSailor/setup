@@ -153,22 +153,20 @@ NOTE: Comments will start with "//" and labels "-". If the line just has text it
                                                                                                  /____/   
                                                                                                  
 // For obvious reasons you should always keep a control session on a system you're actively using.
-ssh -i <key>.pem <user>@10.8.0.1
+    ssh -i <key>.pem <user>@10.8.0.1
 // if you've set SSH to listen on a different port the arg option is '-p' ex. '-p 5050'
-sudo su
-~C
-    // Typing this should have you holding "SHIFT" down...
-    // As you're typing this nothing should show up. if something is priting to screan just delete the text and
-    //   and hit enter a few times and try again.
-    // This will drop you into a SSH session control prompt.
-    //   To exit it just hit enter.
--R 0.0.0.0:8000:10.8.0.2:8000
-    // -R <VPS_IP>:<VPS_List_Port>:<Local_Client_IP>:<Local_Client_List_Port>
-    // This is an example of a straight through reverse tunnel.
-    // rememeber that 10.8.0.1 is the VPS IP and 10.8.0.2 is your local VM's IP
+    sudo su
+    ~C
+         // Typing this should have you holding "SHIFT" down...
+         // As you're typing this nothing should show up. if something is priting to screan just delete the text and
+         //   and hit enter a few times and try again.
+         // This will drop you into a SSH session control prompt.
+         //   To exit it just hit enter.
+    -R 0.0.0.0:8000:10.8.0.2:8000
+        // -R <VPS_IP>:<VPS_List_Port>:<Local_Client_IP>:<Local_Client_List_Port>
+        // This is an example of a straight through reverse tunnel.
+        // rememeber that 10.8.0.1 is the VPS IP and 10.8.0.2 is your local VM's IP
     
-
-
 // To test the functionality of the tunnel
 - Client - 
     python3 -m http.server 8000
