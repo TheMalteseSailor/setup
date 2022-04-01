@@ -77,8 +77,8 @@ NOTE: Comments will start with "//" and labels "-". If the line just has text it
         // !!! Make sure you annotate or leave the screen on where it dropped your 
         //   Client's config. It may be called something else based on the client name you 
         //   indicated.
-    sudo cp /etc/ssh/sshd_conf /etc/ssh/sshd_conf.bak
-    sudo vim /etc/ssh/sshd_conf
+    sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+    sudo vim /etc/ssh/sshd_config
         uncomment GatewayPorts and change to 'yes'
         // To search in VIM hit 'esc' and type '/' plus what you're searching for.
         // Here you'd type '/GatewayPorts'. Make sure you hit enter instead of esc or 
@@ -90,7 +90,7 @@ NOTE: Comments will start with "//" and labels "-". If the line just has text it
 
 --- Client ---
     sudo apt install openvpn
-    sudo vim /etc/ssh/sshd_conf
+    sudo vim /etc/ssh/sshd_config
         uncomment GatewayPorts and change to 'yes'
         // To search in VIM hit 'esc' and type '/' plus what you're searching for.
         // Here you'd type '/GatewayPorts'. Make sure you hit enter instead of esc or 
